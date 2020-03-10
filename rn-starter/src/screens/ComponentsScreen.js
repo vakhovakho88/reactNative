@@ -22,8 +22,7 @@ const ComponentsScreen = () => {
     //     <Text style={styles.text}>{someValue2}</Text>
     //     {someValue3}
     //     </View>
-
-
+    
     // multiline with parantheses or opening tag on same line, opening parantheses on the same line too
 
 }
