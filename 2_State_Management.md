@@ -23,13 +23,13 @@
 * Use hook as datasource
   ```js
    <Button
-            title="Decrease"
-            onPress={()=>{
-                //count--; never call it directly, it changes value if not static but not UI,
-                //console.log(count);
-                setCount(count-1); // Decrement the value in Hook.
-            }}
-            />
+     title="Decrease"
+     onPress={()=>{
+         //count--; never call it directly, it changes value if not static but not UI,
+         //console.log(count);
+         setCount(count-1); // Decrement the value in Hook.
+     }}
+     />
   ```
  * Nice to khnow: We cannot assign just normal styling to buttons.
  
