@@ -44,6 +44,43 @@ const HomeScreen = ( {navigation}) => {
     onPress={()=>navigation.navigate('SquareScreenWithReducer')}
     
     />
+    <Button
+    title="Go to the Square Screen with reducer, comunity"
+    onPress={()=>navigation.navigate('ColorsComunityConvention')}
+    
+    />
+    <Button
+    title="Go to the counterscreen with reducer"
+    onPress={()=>navigation.navigate('CounterScreenWithReducer')}
+    
+    />
+      <Button
+    title="Go to Text screen (input)"
+    onPress={()=>navigation.navigate('TextScreen')}
+    
+    />
+    
+    <Button
+    title="Go to password input"
+    onPress={()=>navigation.navigate('PasswordInput')}
+    />
+    <Button
+    title="Go to Box Object Model"
+    onPress={()=>navigation.navigate('BoxScreen')}
+    />
+    <Button
+    title="Go to Flex Box Model"
+    onPress={()=>navigation.navigate('FlexBoxModel')}
+    />
+     <Button
+    title="Go to Position Model"
+    onPress={()=>navigation.navigate('PositionProperty')}
+    />
+     <Button
+    title="Go to Excercise BoxScreen"
+    onPress={()=>navigation.navigate('ExcerciseBoxScreen')}
+    />
+    
 
 
 

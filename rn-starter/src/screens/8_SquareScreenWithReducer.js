@@ -10,8 +10,10 @@ const COLOR_INCREMENT = 20;
 
 // name optional
 const reducer = (state, action)=>{
+    // without comunity convention:
     // state === {red: number, green:number, blue:number}
-    //action === {colorTochange: 'red' | 'green' | 'blue', amount: +15 | -15}
+    // action === {colorTochange: 'red' | 'green' | 'blue', amount: +15 | -15}
+    
 
     switch(action.colorToChange){
         case 'red':
