@@ -61,9 +61,9 @@
     flex: 1
     ```
     * Let us say we have 3 element: element1, element2, element3. Height of parent element is 300.
-      * Case Nr.1: all elements have flex:1  (100:100:100)
+      * Case Nr.1: all elements have flex:1  (100 : 100 : 100)
       * Case Nr.2: only one element (lets say first) has flex:1 and anothe elements are 50. (200:50:50)
-      * Case Nr.3: element1 has flex:1, element2 has flex:2 and elemen3 is 150. (50:100:150)
+      * Case Nr.3: element1 has flex:1, element2 has flex:2 and elemen3 is 150. (50: 100 : 150)
       * Case Nr.4: elemen1 has flex:5, element2 has flex:4 and element3 has flex:1 (150:120:30)
       * There are of course more cases, but the principe must be clear with examples above.
      * If only one element has got flex:1 it fills the rest place in parent
