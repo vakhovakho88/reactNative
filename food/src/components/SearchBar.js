@@ -11,8 +11,6 @@ import {Feather} from '@expo/vector-icons';
 
 const SearchBar = ({term,onTermChange, onTermSubmit }) => {
 
-    
-
     return (
         <View style={styles.backgroundStyle}>
             <Feather name="search" style={styles.iconStyle} />

@@ -32,3 +32,22 @@ automatically shown what exported
 on the screen
 
 https://github.com/expo/vector-icons
+
+
+
+axios is alternative to fetch 
+axios is easier to use and we have better results
+
+>>npm install axios
+
+
+
+
+we must try to separate jsx and business logik
+it is cool to extract business logik in another file
+and reuse it on many places
+thats we we create useResults, to use it as hook.
+it means we created our own hook...
+
+
+the next step is to create a separate component fro result list.

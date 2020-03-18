@@ -4,6 +4,11 @@
     "slug": "food",
     "privacy": "public",
     "sdkVersion": "36.0.0",
+    "android": {
+      "package": "vakho.first.project",
+      "versionCode": 1,
+      "permissions": []
+    },
     "platforms": [
       "ios",
       "android",
