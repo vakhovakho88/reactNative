@@ -1,10 +1,7 @@
-import React,{useState,useEffect} from 'react';
-import {View, Text,StyleSheet} from 'react-native';
+import React,{useState} from 'react';
+import {View, Text,StyleSheet, ScrollView} from 'react-native';
 
 import SearchBar from './../components/SearchBar';
-
-// import yelp api
-import yelp from '../api/yelp';
 
 // our created hook
 import useResults from '../hooks/useResults';
@@ -29,18 +26,28 @@ const SearchScreen = () => {
     }
      
     return (
-        <View style={{backgroundColor:'white'}}>
-            
+        // flex:1 says that all the visible space must be token
+        // with this we are avoiding that navigation bar is over our components
+        // <View style={{backgroundColor:'white', flex:1}}>
+        // but the alternative is not an element, empty tag, that can be used as a root element
+        // the element will not be rendered and it doesnot go under the edges
+        // in this way we can achieve the samme result. 
+        //  <>we could wrap everything here</> 
+        // but u can not assign styling to it, an i need white backgrouncolor thats why
+        // i use old way
+        <View style={{backgroundColor:'white', flex:1}}>
             <SearchBar term={term} 
             onTermChange={newTerm=> setTerm(newTerm)}
             onTermSubmit={()=>searchApi(term)}
             
             />
             {errorMessage ? <Text>{errorMessage}</Text> : null}
-            <Text>We have found {results.length} results</Text>
+            <ScrollView>
             <ResultsList results = {filterResultsByPrice('$')} title="Cost Effective"/>
             <ResultsList results = {filterResultsByPrice('$$')} title="Bit Pricer"/>
             <ResultsList results = {filterResultsByPrice('$$$')} title="Cost Spender"/>
+            <ResultsList results = {filterResultsByPrice('$$')} title="Cost Medium"/>
+            </ScrollView>    
         </View>
     );
 }
