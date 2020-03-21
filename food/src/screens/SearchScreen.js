@@ -9,6 +9,9 @@ import useResults from '../hooks/useResults';
 // import resultsList
 import ResultsList from '../components/ResultsList';
 
+// we could give destructured {navigation} and give it to child components too 
+// But we use direct imoprt of navigation instead to give it as prop to child components.
+// withNavigation 
 
 const SearchScreen = () => {
     //in this state we save a search value

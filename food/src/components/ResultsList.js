@@ -1,9 +1,20 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
 import ResultsDetail from '../components/ResultsDetail';
 import ResultDetail from '../components/ResultsDetail';
+import {withNavigation} from 'react-navigation';
 
-const ResultsList = ({title,results}) =>{
+// navigation prop stays here, but it is now from react navgation and not from parent component
+// we must wrapp export with withNavigation()
+const ResultsList = ({title,results,navigation}) =>{
+
+    //if we dont have any results than dont show the titlee of section
+    if (results.length==0)
+    {
+        console.log("captured");
+        return null;        
+    }
+    else
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{title}</Text>
@@ -14,7 +25,10 @@ const ResultsList = ({title,results}) =>{
             data= {results}
             keyExtractor={(result)=>result.id}
             renderItem = {({item})=>{
-            return <ResultDetail result={item}/>
+            return (
+            <TouchableOpacity onPress={()=>navigation.navigate("ResultsShowScreen", {id: item.id})}>
+            <ResultDetail result={item}/>
+            </TouchableOpacity>);
             }}
 
             />
@@ -35,4 +49,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default ResultsList;
+export default withNavigation(ResultsList);

@@ -51,3 +51,13 @@ it means we created our own hook...
 
 
 the next step is to create a separate component fro result list.
+
+
+props has much more than we give it, check it..
+
+
+comunications between screens:
+- what i tapped on
+- it is done with navigation
+- We can pass second argument to our navgation. it is javascript object.
+- but it isnot in props it is in navigation and we call it from there
