@@ -61,3 +61,34 @@ comunications between screens:
 - it is done with navigation
 - We can pass second argument to our navgation. it is javascript object.
 - but it isnot in props it is in navigation and we call it from there
+
+
+
+BLOG app
+- a lot of about CRUD (Create, Read, Update, Delete)
+again create new project
+>npx expo-cli init blog
+
+1. Install React Navigation
+
+npm install react-navigation
+
+2. Install Dependencies
+
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+3. Install React Navigation Stack
+
+npm install react-navigation-stack @react-native-community/masked-view
+
+4. Start the app and clear cache with npm start -c
+
+
+
+Create  Blog post provider
+
+
+Context syste helps us to move information from parent to child hierarchies without to write much code. In Props it is easy to setup but much code to write.
+
+
+hooks are functions they add an additional functionality to our functional components
