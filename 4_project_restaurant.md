@@ -92,3 +92,58 @@ Context syste helps us to move information from parent to child hierarchies with
 
 
 hooks are functions they add an additional functionality to our functional components
+
+
+
+
+#Server
+we are going to use json server for our application
+but it is only good for development purposes
+the url: https://www.npmjs.com/package/json-server
+
+server setup is easy but with react native it is relative complicated.
+json server runs on our computer screen 16
+
+to avvoid having problems with tunnels an lan we are going to use ngrok server
+ngrok makes it possible to make our computer reachable for another devices. (screen 17)
+
+we are going to make a directory with the namy (optionall) jsonserver. One step upper from our blog directory
+
+then we are making >npm init in this directory to generate json package
+
+then we install couple modules: 
+npm install -s json-server
+npm install -s ngrok
+or just: npm install -s json-server ngrok
+
+start code editor inside a directory:
+> code .
+
+in the folder let us create db.json file, this file is eventually where json stores all the information and we are going to add a poilerplate json there
+
+then we are going to go to package.json and add two scripts in scripts object:
+one script is dedicated to starting up a json server and another one to strar up ngrok
+
+ngrok exposes json server on our specified port.
+  "scripts": {
+    "db": "json-server -w db.json",
+    "tunnel": "ngrok http 3000"
+  },
+ 
+ then open up twwo terminals in this directori 
+ in one terminal:
+ npm run db
+ it starts json server if the port is not busy
+ now we can acces our json server from our computer but not from another machines
+ here we should use ngrok to make it reachable for outside world
+
+ in second terminal let us write 
+ npm run tunnel
+
+ now the server is ready for computer and for another devices too. 
+
+ the next step is to install axios and with axios we can make requests
+
+
+
+ structure of interaction and requests (screenshot 18) 

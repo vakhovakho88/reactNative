@@ -1,5 +1,8 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+
+import React from 'react';
+
 import HomeScreen from "./src/screens/HomeScreen";
 import ComponentsScreen from "./src/screens/ComponentsScreen";
 import MyFirstApp from "./src/screens/1_Excercise";
@@ -19,6 +22,10 @@ import BoxScreen from './src/screens/13_BoxScreen';
 import FlexBoxModel from './src/screens/14_FlexBoxModel';
 import PositionProperty from './src/screens/15_PositionProperty';
 import ExcerciseBoxScreen from './src/screens/16_ExcerciseBoxScreen';
+
+
+import ContextScreen from './src/screens/17_ContextScreen';
+
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
@@ -39,7 +46,8 @@ const navigator = createStackNavigator(
     BoxScreen: BoxScreen,
     FlexBoxModel: FlexBoxModel,
     PositionProperty:PositionProperty,
-    ExcerciseBoxScreen: ExcerciseBoxScreen
+    ExcerciseBoxScreen: ExcerciseBoxScreen,
+    ContextScreen,
     
   },
   {
@@ -52,4 +60,10 @@ const navigator = createStackNavigator(
   }
 );
 
-export default createAppContainer(navigator);
+
+
+const App = createAppContainer(navigator);
+
+export default () =>{
+  return <App/>
+}

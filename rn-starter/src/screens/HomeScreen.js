@@ -80,6 +80,12 @@ const HomeScreen = ( {navigation}) => {
     title="Go to Excercise BoxScreen"
     onPress={()=>navigation.navigate('ExcerciseBoxScreen')}
     />
+
+
+    <Button
+    title="Go to Context Screen"
+    onPress={()=>navigation.navigate('ContextScreen')}
+    />
     
 
 
